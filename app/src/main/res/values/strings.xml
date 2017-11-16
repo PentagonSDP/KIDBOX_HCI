@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="title_activity_cartoon__add">Cartoon_Add</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="add_video_from_youtube">Videos</string>
+    <string name="Ok">Done</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="ob_header"></string>
+    <string name="ob_header2"></string>
+    <string name="ob_header3"></string>
+
+    <string name="ob_get_started">GET STARTED</string>
+
+    <string name="ob_desc1">Play video and press "share" option</string>
+    <string name="ob_desc2">Copy video link</string>
+    <string name="ob_desc3">Paste link here</string>
+</resources>

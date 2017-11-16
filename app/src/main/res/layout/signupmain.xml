@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/signEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#8b21fc"
+        android:hint="Enter Mail ID"/>
+
+
+    <EditText
+        android:id="@+id/signPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"
+        android:textColor="#8b21fc"
+        android:hint="Enter Password"/>
+
+    <EditText
+        android:id="@+id/signConPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"
+        android:textColor="#8b21fc"
+        android:hint="Confirm Password"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/signSubmit"
+        android:text="Submit"
+        android:textColor="#ffffff"
+        android:background="#8b21fc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

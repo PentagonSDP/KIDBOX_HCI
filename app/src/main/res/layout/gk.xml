@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Country"
+                android:textColor="#f9faf8"
+                android:textStyle="bold"
+                android:background="#ca6cfc"
+                android:id="@+id/country"
+
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Space"
+                android:textStyle="bold"
+                android:textColor="#f9faf8"
+                android:background="#83c7ec"
+                android:id="@+id/space"
+
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Flower"
+                android:textStyle="bold"
+                android:textColor="#f9faf8"
+                android:background="#f295e4"
+                android:id="@+id/flower"
+                android:onClick="flower"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Animal"
+                android:textStyle="bold"
+                android:background="#c99580"
+                android:textColor="#f9faf8"
+
+                android:id="@+id/animal"
+                android:onClick="animal"
+                />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Vegetable"
+                android:textStyle="bold"
+                android:textColor="#f9faf8"
+                android:background="#9fd66b"
+                android:id="@+id/vegetable"
+                android:onClick="vegetable"
+
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Fruit"
+                android:textStyle="bold"
+                android:background="#f7c561"
+                android:textColor="#f9faf8"
+                android:id="@+id/fruit"
+                android:onClick="fruit"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Colour"
+                android:textStyle="bold"
+                android:textColor="#f9faf8"
+                android:background="#f59393"
+                android:id="@+id/colour"
+                android:onClick="colour"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

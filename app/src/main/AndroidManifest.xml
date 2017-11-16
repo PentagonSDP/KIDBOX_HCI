@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.user.kidbox">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="kidbox">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tempMain"
+            android:label="KidBox"/>
+       <!-- <activity
+            android:name=".Cartoon_video"
+            android:label="Cartoon"/>
+        <activity
+            android:name=".VideoPlayer"
+            android:label="Video"/>
+        <activity
+            android:name=".Craft_video"
+            android:label="Craft"/>
+        <activity
+            android:name=".Story_video"
+            android:label="Story"/>
+        <activity
+            android:name=".Rhymes_video"
+            android:label="Rhymes"/> -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".gk"
+            android:label="General knowledge"/>
+        <activity
+            android:name=".CountryActivity"
+            android:label="Country"/>
+        <activity
+            android:name=".FullCountry"
+            android:label="Country"/>
+        <activity
+            android:name=".SpaceActivity"
+            android:label="Space"/>
+        <activity
+            android:name=".FullSpace"
+            android:label="Space"/>
+        <activity android:name=".OnBoardingActivity">
+        </activity>
+        <activity
+            android:name=".VegetableActivity"
+            android:label="Dancing Vegetable"/>
+        <activity
+            android:name=".ToDoActivity"
+            android:label="To do List"/>
+        <activity android:name=".TabActivity_1"/>
+        <activity
+            android:name=".DailyTask"
+            android:label="Daily Task"/>
+        <activity android:name=".TabActivity_2"/>
+        <activity
+            android:name=".BonousTask"
+            android:label="Bonous Task"/>
+        <activity android:name=".TabActivity_3"/>
+        <activity
+            android:name=".AddTask"
+            android:label="Add Task"/>
+        <activity
+            android:name=".signUpMain"
+            android:label="Sign Up"/>
+        <activity
+            android:name=".YouTubeTestActivity"
+            android:label="@string/add_video_from_youtube">
+        </activity>
+        <activity android:name=".Add_Video_Link">
+        </activity>
+    </application>
+
+</manifest>
