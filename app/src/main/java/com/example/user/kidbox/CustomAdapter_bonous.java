@@ -61,7 +61,7 @@ class CustomAdapter_bonous extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
-        Holder holder = new Holder();
+        CustomAdapter_bonous.Holder holder = new CustomAdapter_bonous.Holder();
         View rowView;
         rowView = inflater.inflate(R.layout.bonous,null);
         holder.t_bonous = (TextView) rowView.findViewById(R.id.text_bonous);

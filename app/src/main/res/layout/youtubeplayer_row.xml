@@ -3,7 +3,8 @@
                 android:id="@+id/parent_relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/activity_horizontal_margin">
 
     <!--android:foreground="@drawable/image_ripple"
         card_view:cardElevation="0dp"
@@ -25,47 +26,70 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.youtube.player.YouTubeThumbnailView
-                android:id="@+id/youtube_thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:scaleType="centerCrop"
-                android:visibility="visible"/>
-
-            <RelativeLayout android:id="@+id/relativeLayout_over_youtube_thumbnail"
-                            android:layout_width="match_parent"
-                            android:layout_height="250dp"
-                            android:visibility="visible">
-
-                <ImageView android:id="@+id/btnYoutube_player"
-                           android:layout_width="match_parent"
-                           android:layout_height="match_parent"
-                           android:scaleType="center"
-                           android:src="@mipmap/ic_youtube_play_button"/>
-
-            </RelativeLayout>
-        </RelativeLayout>
-            <TextView
-                android:id="@+id/video_title"
+            android:orientation="vertical"
+            android:longClickable="true">
+            <LinearLayout
+                android:id="@+id/one_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/activity_horizontal_margin"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:visibility="visible"/>
-            <TextView
-                android:id="@+id/video_author"
+                android:orientation="vertical">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/activity_horizontal_margin"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:visibility="visible"/>
+                android:orientation="horizontal">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/check_per_item"
+                    android:visibility="gone"/>
+                <RelativeLayout
+                    android:id="@+id/thumbnail_play_both"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:longClickable="false">
+
+                    <com.google.android.youtube.player.YouTubeThumbnailView
+                        android:id="@+id/youtube_thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        android:longClickable="false"/>
+
+                    <RelativeLayout android:id="@+id/relativeLayout_over_youtube_thumbnail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="250dp"
+                                    android:visibility="visible"
+                                    android:longClickable="false">
+
+                        <ImageView android:id="@+id/btnYoutube_player"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"
+                                   android:scaleType="center"
+                                   android:src="@mipmap/ic_youtube_play_button"
+                                   android:longClickable="false"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+                <TextView
+                    android:id="@+id/video_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/video_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+                </LinearLayout>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

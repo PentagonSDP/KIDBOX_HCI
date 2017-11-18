@@ -54,6 +54,7 @@ class CustomAdapter_daily extends BaseAdapter {
 
     public class Holder {
         TextView t_daily;
+
         Button b_daily;
         ImageView d_img;
     }
@@ -61,7 +62,7 @@ class CustomAdapter_daily extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
-        Holder holder = new Holder();
+        CustomAdapter_daily.Holder holder = new CustomAdapter_daily.Holder();
         View rowView;
         rowView = inflater.inflate(R.layout.daily,null);
         holder.t_daily = (TextView) rowView.findViewById(R.id.text_daily);

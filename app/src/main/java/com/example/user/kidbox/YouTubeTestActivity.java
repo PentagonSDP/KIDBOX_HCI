@@ -5,6 +5,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -81,15 +82,38 @@ public class YouTubeTestActivity extends AppCompatActivity {
             retVal = "";
         }
     }
+    void removeData() throws IOException {
+        if(adapter != null)
+        {
+            adapter.setVideoList();
+            adapter.notifyDataSetChanged();
+        }
+    }
 
 
     @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
+    public boolean onPrepareOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.cartoon__add, menu);
         if(Integer.valueOf(isParent) == 0)
         {
             menu.findItem(R.id.action_add).setVisible(false);
+            menu.findItem(R.id.action_delete).setVisible(false);
         }
+        /*Runnable runnable = new Runnable() {
+
+            public void run() {
+                    new Handler().post(new Runnable() {
+                        public void run() {
+                            if(adapter.getCheckBoxVisibility() == false)
+                            {
+                                menu.findItem(R.id.action_delete).setVisible(false);
+                            }
+                        }
+                    });
+                }
+
+        };
+        new Thread(runnable).start();*/
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -121,6 +145,13 @@ public class YouTubeTestActivity extends AppCompatActivity {
             /*case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
                 return true; */
+            case R.id.action_delete:
+                try {
+                    removeData();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return true;
 
             case R.id.action_add:
                 // User chose the "Favorite" action, mark the current item

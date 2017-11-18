@@ -1,6 +1,5 @@
 package com.example.user.kidbox;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -58,7 +57,7 @@ public class gk extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                //startActivity(new Intent(getApplicationContext(), VegetableActivity.class));
+                startActivity(new Intent(getApplicationContext(), VegetableActivity.class));
             }
 
         });

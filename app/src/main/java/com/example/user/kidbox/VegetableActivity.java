@@ -4,15 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-//import com.bumptech.glide.Glide;
-//import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 /**
  * Created by emma on 10/10/17.
  */
 
-/*public class VegetableActivity extends Activity
-{
+public class VegetableActivity extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vegetable);
@@ -24,7 +23,7 @@ import android.widget.ImageView;
                 .crossFade()
                 .into(load_image);*/
 
-/*        ImageView imageView = (ImageView) findViewById(R.id.load_Image);
+        ImageView imageView = (ImageView) findViewById(R.id.load_Image);
         ImageView imageView2 = (ImageView) findViewById(R.id.load_Image2);
         ImageView imageView3 = (ImageView) findViewById(R.id.load_Image3);
         ImageView imageView4 = (ImageView) findViewById(R.id.load_Image4);
@@ -69,7 +68,6 @@ import android.widget.ImageView;
     }
 }
 
-*/
 
 
 
