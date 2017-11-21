@@ -3,53 +3,94 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <EditText
-        android:id="@+id/task"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="30dp"
-        android:textColor="#8b21fc"
-        android:hint="Enter task"/>
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--android:layout_gravity="center"-->
+            <EditText
+                android:id="@+id/task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="#8b21fc"
+                android:hint="Enter task"/>
 
 
-    <EditText
-        android:id="@+id/point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="30dp"
-        android:textColor="#8b21fc"
-        android:hint="Enter Point"/>
+            <EditText
+                android:id="@+id/point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="#8b21fc"
+                android:hint="Enter Point"/>
 
-    <CheckBox
-        android:textColor="#8b21fc"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Daily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:textColor="#8b21fc"
+                android:layout_margin="5dp"
+                android:text="Daily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <CheckBox
-        android:textColor="#8b21fc"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Bonous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        android:id="@+id/sub"
-        android:text="Submit"
-        android:textColor="#ffffff"
-        android:background="#8b21fc"
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:textColor="#8b21fc"
+                android:layout_margin="5dp"
+                android:text="Bonous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/helpmom"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_weight="1" >
+            </ImageView>
+
+            <ImageButton
+                android:id="@+id/buttonLoadPicture"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/camera"
+                android:onClick="loadImagefromGallery"
+                android:text="Choose Image" >
+            </ImageButton>
+
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/sub"
+                android:text="Submit"
+                android:textColor="#ffffff"
+                android:background="#ffaa22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:layout_margin="5dp"
+        android:layout_alignParentLeft="true"
+
+        android:background="@drawable/back"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-
 
 </LinearLayout>

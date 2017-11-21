@@ -2,123 +2,121 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4d9150"
-
+    android:background="#a03ece"
     >
-    <ScrollView
+
+    <TextView
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:text="Your Progress:"
+        android:textColor="#ffde36"
+        android:textSize="30dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:background="#34d6c3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:id="@+id/linear4"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-   <!-- <TextView
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textColor="#f7651c"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="Daily Task Point: 50%"
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textColor="#f52f8b"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="Bonous Task Point: 30%"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textColor="#38c201"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="Total Point: 80%"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
-    <ImageView
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/gift"
-        android:id="@+id/im"
-        /> -->
-            <TextView
-                android:gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:textSize="20dp"
-                android:text="Daily Task"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/silver1"
-                />
+        android:orientation="horizontal"
+        >
 
-            <ProgressBar
-                android:layout_gravity="center"
-                android:id="@+id/activeProgress"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_marginRight="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:progress="50"
-                android:progressDrawable="@drawable/progress_background"/>
+        <TextView
+            android:id="@+id/t_shortage"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Needed"
+            android:textColor="#ffde36"
+            android:textSize="20dp"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollSh"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
             </LinearLayout>
+        </HorizontalScrollView>
 
-
-
-            <ProgressBar
-                android:layout_marginTop="20dp"
-                android:id="@+id/ProgressBar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="?android:attr/progressBarStyleLarge"
-                android:indeterminateDrawable="@drawable/custom_progressbar"
-                android:progress="50"
-                />
-
-
-
-
-
-    <TextView
-
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:textColor="#ffd000"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="20 point left to get the gift!!!"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
     </LinearLayout>
-    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/l_gift1"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/load_Image"
+            android:src="@drawable/carota"
+            android:layout_centerHorizontal="true"
+
+            />
+    </LinearLayout>
+
+
+
+    <!--<LinearLayout
+        android:id="@+id/l_gift2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/load_Image2"
+            android:src="@drawable/carota"
+            android:layout_centerHorizontal="true"
+
+            />-->
+    <TextView
+        android:id="@+id/t_gift"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Congrats! You are going to get a gift!"
+        android:textColor="#ffa600"
+        android:textSize="25dp"
+        />
+
+
 </LinearLayout>

@@ -20,7 +20,7 @@ class CustomAdapter_space extends BaseAdapter {
     //int [] imageId;
     private static LayoutInflater inflater = null;
 
-    public CustomAdapter_space(SpaceActivity mainActivity, String[] spaceNameList) {
+    public CustomAdapter_space(space mainActivity, String[] spaceNameList) {
         // TODO Auto-generated constructor stub
         result_space = spaceNameList;
         context_space = mainActivity;
@@ -72,7 +72,7 @@ class CustomAdapter_space extends BaseAdapter {
                 // Intent myIntent = new Intent(this, fullscreenpic.class);
                 // myIntent.putExtra("value", position);
                 //startActivity(myIntent);
-                Intent newActivity = new Intent(context_space, FullSpace.class);
+                Intent newActivity = new Intent(context_space, space.class);
                 newActivity.putExtra("select", position);
                 context_space.startActivity(newActivity);
 

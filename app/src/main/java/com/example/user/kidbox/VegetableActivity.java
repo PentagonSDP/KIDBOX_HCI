@@ -1,27 +1,98 @@
 package com.example.user.kidbox;
 
-import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.GridView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import java.util.ArrayList;
 
 /**
  * Created by emma on 10/10/17.
  */
 
-public class VegetableActivity extends Activity{
-    public void onCreate(Bundle savedInstanceState) {
+public class VegetableActivity extends AppCompatActivity {
+
+    GridView gv;
+    Context context_veg;
+    ArrayList prgmName;
+    public static int [] vImagesList={R.drawable.carrot,R.drawable.spinach,R.drawable.radish,R.drawable.bittermelon,
+            R.drawable.pumpkin,R.drawable.cucumber,R.drawable.watermelon,R.drawable.banana, R.drawable.guava};
+    //public static String [] prgmNameList={"Bangladesh","India","Pakistan","Bhutan","Nepal","Sri Lanka","Maldives"};
+
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vegetable);
+        setContentView(R.layout.vegetable);
+
+        context_veg = this;
+        gv = (GridView) findViewById(R.id.gridView);
+        gv.setAdapter(new CustomAdapter_veg(this, vImagesList));
+
+    }
+}
+
+
+        /*imgIds = new int[]{R.drawable.helpmom, R.drawable.plant, R.drawable.puzzle, R.drawable.school};
+
+        Button prev = (Button) findViewById(R.id.left_button);
+        Button nxt = (Button) findViewById(R.id.right_button);
+
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i = imgIds.length; i>0; i--) {
+                    ImageView vegImg = (ImageView) findViewById(R.id.veg_img);
+                    vegImg.setImageResource(imgIds[i]);
+                }
+
+            }
+        });
+
+        nxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                while (true){
+                    int i=0;
+                    if(imgIds[i]>= imgIds.length-1)
+                    {
+                        //i=imgIds.length-1;
+                        ImageView vegImg = (ImageView) findViewById(R.id.veg_img);
+                        vegImg.setImageResource(imgIds[imgIds.length-1]);
+                    }
+                    else if(imgIds[i]<imgIds.length)
+                    {
+                        i++;
+                        ImageView vegImg = (ImageView) findViewById(R.id.veg_img);
+                        vegImg.setImageResource(imgIds[i]);
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "end image", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+
+            }
+        });
+
+    }*/
+
+
+
+
+
+
+
+
+
+
        /* ImageView load_image = (ImageView)findViewById(R.id.load_Image);
 
         Glide.with(this)
                 .load(R.drawable.carota)
                 .asGif()
                 .crossFade()
-                .into(load_image);*/
+                .into(load_image);
 
         ImageView imageView = (ImageView) findViewById(R.id.load_Image);
         ImageView imageView2 = (ImageView) findViewById(R.id.load_Image2);
@@ -65,8 +136,8 @@ public class VegetableActivity extends Activity{
 
         //GlideDrawableImageViewTarget imageViewTarget3 = new GlideDrawableImageViewTarget(imageView3);
         //Glide.with(this).load(R.drawable.carot_potato).into(imageViewTarget3);
-    }
-}
+    }*/
+
 
 
 

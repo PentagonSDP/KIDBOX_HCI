@@ -1,0 +1,136 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+   <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <TextView
+            android:gravity="center"
+            android:id="@+id/veg_txt1"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="italic|bold"
+            android:textColor="#f9ef62"
+            android:text="carrot"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:gravity="center|right"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/veg_img"
+                android:src="@drawable/carrot"
+                />
+            <ImageButton
+                android:layout_margin="5dp"
+                android:background="@drawable/yes"
+                android:layout_gravity="center"
+                android:id="@+id/yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="yes"
+
+                />
+            <ImageButton
+                android:id="@+id/no"
+                android:layout_margin="5dp"
+                android:background="@drawable/no"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="no">
+
+            </ImageButton>
+
+        </LinearLayout>
+       />
+       <TextView
+           android:gravity="center"
+           android:id="@+id/veg_txt3"
+           android:layout_margin="10dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="25dp"
+           android:textStyle="italic|bold"
+           android:textColor="#f9ef62"
+           android:text="Eat 1 carrot and see the progress!"
+           />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay3"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/load_Image"
+           android:src="@drawable/carota"
+           android:layout_centerHorizontal="true"
+
+           />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/veg_txt2"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:padding="10dp"
+        android:textStyle="italic|bold"
+        android:textColor="#298c35"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff09a"
+        android:text="Item eaten till now -"
+        />
+    <HorizontalScrollView
+        android:background="#fff09a"
+        android:id="@+id/scroll1"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </HorizontalScrollView>
+        </LinearLayout>
+</LinearLayout>

@@ -19,7 +19,7 @@ class CustomAdapter extends BaseAdapter {
     //int [] imageId;
     private static LayoutInflater inflater = null;
 
-    public CustomAdapter(CountryActivity mainActivity, String[] prgmNameList) {
+    public CustomAdapter(country mainActivity, String[] prgmNameList) {
         // TODO Auto-generated constructor stub
         result = prgmNameList;
         context = mainActivity;
@@ -71,7 +71,7 @@ class CustomAdapter extends BaseAdapter {
                 // Intent myIntent = new Intent(this, fullscreenpic.class);
                 // myIntent.putExtra("value", position);
                 //startActivity(myIntent);
-                Intent newActivity = new Intent(context, FullCountry.class);
+                Intent newActivity = new Intent(context, country.class);
                 newActivity.putExtra("select", position);
                 context.startActivity(newActivity);
 

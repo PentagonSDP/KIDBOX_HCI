@@ -35,9 +35,9 @@ public class FlowerActivity extends AppCompatActivity {
 
     private void initData() {
 
-        mImgIds = new int[]{R.drawable.gal3, R.drawable.gal3, R.drawable.gal3, R.drawable.gal3};
+        mImgIds = new int[]{R.drawable.lily,R.drawable.kodom,R.drawable.rose,R.drawable.jasmine,R.drawable.joba,R.drawable.gadha,R.drawable.oporajita,R.drawable.sheuli};
         //size 300x300px
-        mTxtIds = new String[] {"Tidy Up bed","Plant tree","Help mom","progress bar"};
+        mTxtIds = new String[] {"Lily(শাপলা ফুল)","Burflower(কদম ফুল)", "Rose( গোলাপ ফুল)","Jasmine (বেলি ফুল)","China Rose (জবা ফুল)", "Marigold(গাঁদা ফুল)","Blue Petunia(নীল অপরাজিতা)" ,"Sheuli Flower( শিউলি ফুল)"};
 
     }
 

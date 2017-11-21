@@ -1,52 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="horizontal"
-android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="7dp"
+    android:gravity="center"
     >
-<ImageView
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="0dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp">
 
-    android:layout_gravity="center"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_width="48dp"
-    android:layout_height="48dp"
-    android:id="@+id/image_bonous"
-    android:src="@drawable/toothbrush"
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/image_bonous"
+            android:src="@drawable/toothbrush"
 
-    />
+            />
+    </LinearLayout>
 
-<TextView
-    android:textColor="#f77d31"
-    android:textStyle="bold"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="0dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:id="@+id/text_bonous"
-    android:layout_gravity="center"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="25dp"
-    android:text="TextView"
-    />
+    <TextView
+        android:textColor="#ba15bf"
+        android:padding="5dp"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:id="@+id/text_bonous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="sans"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="TextView"
+        />
+    <RelativeLayout
+        android:id="@+id/rel_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+        <ImageButton
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checked"
+            android:id="@+id/btn_bonous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
-<Button
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="0dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginLeft="5dp"
-    android:text="Approve"
-    android:textColor="#ffffff"
-    android:background="#52b2e2"
-    android:id="@+id/btn_bonous"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+        <ImageButton
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/unchecked"
+            android:id="@+id/del2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
-
+    </RelativeLayout>
 </LinearLayout>

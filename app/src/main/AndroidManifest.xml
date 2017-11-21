@@ -4,9 +4,12 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -20,44 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".tempMain"
-            android:label="KidBox"/>
-       <!-- <activity
-            android:name=".Cartoon_video"
-            android:label="Cartoon"/>
-        <activity
-            android:name=".VideoPlayer"
-            android:label="Video"/>
-        <activity
-            android:name=".Craft_video"
-            android:label="Craft"/>
-        <activity
-            android:name=".Story_video"
-            android:label="Story"/>
-        <activity
-            android:name=".Rhymes_video"
-            android:label="Rhymes"/> -->
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
 
         <activity
-            android:name=".gk"
+            android:name=".Gk"
             android:label="General knowledge"/>
-        <activity
-            android:name=".CountryActivity"
-            android:label="Country"/>
-        <activity
-            android:name=".FullCountry"
-            android:label="Country"/>
-        <activity
-            android:name=".SpaceActivity"
-            android:label="Space"/>
-        <activity
-            android:name=".FullSpace"
-            android:label="Space"/>
+
         <activity android:name=".OnBoardingActivity">
         </activity>
         <activity
@@ -73,7 +47,7 @@
         <activity android:name=".TabActivity_2"/>
         <activity
             android:name=".BonousTask"
-            android:label="Bonous Task"/>
+            android:label="Bonus Task"/>
         <activity android:name=".TabActivity_3"/>
         <activity
             android:name=".AddTask"
@@ -87,6 +61,15 @@
         </activity>
         <activity android:name=".Add_Video_Link">
         </activity>
+        <activity android:name=".animal"/>
+        <activity android:name=".space"/>
+        <activity android:name=".color"/>
+        <activity android:name=".country"/>
+        <activity android:name=".FlowerActivity"/>
+        <activity android:name=".Vegetable_gallery"/>
+        <activity android:name=".tempMain"
+            android:label="KidBox"/>
+
     </application>
 
 </manifest>

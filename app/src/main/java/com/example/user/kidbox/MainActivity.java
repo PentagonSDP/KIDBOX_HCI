@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity{
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Log.d("OnDoubleTapListener", "onDoubleTap");
                 if(motionEvent.getAction() == MotionEvent.ACTION_UP)
-                    initiatePopupWindow(view);
+                    initiatePopupWindow();
                 return true;
             }
         });
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
-                Intent Image = new Intent(getApplicationContext() , gk.class);
+                Intent Image = new Intent(getApplicationContext() , Gk.class);
                 startActivity(Image);
             }
         });
@@ -153,106 +153,39 @@ public class MainActivity extends AppCompatActivity{
     }
 
     PopupWindow pwindo;
-    private void initiatePopupWindow(View view) {
+    private void initiatePopupWindow() {
         try {
-            LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context
-                    .LAYOUT_INFLATER_SERVICE);
-            final View layout = inflater.inflate(R.layout.signup,(ViewGroup) findViewById(R.id.popup_element));
-            pwindo = new PopupWindow(layout, 700, 970,true);
+            //Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View layout = inflater.inflate(R.layout.signup,(ViewGroup) findViewById(R.id.popup_element));
+            pwindo = new PopupWindow(layout, 600, 770,true);
 
-
+            /*pwindo.setOutsideTouchable(true);
             pwindo.setTouchable(true);
+            pwindo.setBackgroundDrawable(new BitmapDrawable(
+                    getApplicationContext().getResources(),
+                    Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
+            ));*/
+
             pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
             //pwindo.update();
 
             Button log_ = (Button) layout.findViewById(R.id.button_log);
-            log_.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    flag = 1;
-                    pwindo.dismiss();
-                }
-            });
-
-            Button creatAcc = (Button) layout.findViewById(R.id.createAccount);
-            //creatAcc.setOnClickListener(gotoSignUP);
-
-            creatAcc.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    flag = 1;
-                    pwindo.dismiss();
-                    return;
-                }
-            });
-
-            Button cancel = (Button) layout.findViewById(R.id.cancel);
-            //cancel.setOnClickListener(refreshPage);
-            cancel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    pwindo.dismiss();
-                    return;
-                }
-            });
+            log_.setOnClickListener(cancel_button);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void myFancyMethod1(View v) {
-        Toast.makeText(getApplicationContext(),"Canceled",Toast.LENGTH_SHORT).show();
-        Intent Image = new Intent(getApplicationContext() , MainActivity.class);
-        startActivity(Image);
-        // does something very interesting
-    }
-    public void myFancyMethod(View v) {
-        Toast.makeText(getApplicationContext(),"Wrong mail id",Toast.LENGTH_SHORT).show();
-        Intent Image = new Intent(getApplicationContext() , signUpMain.class);
-        startActivity(Image);
-        // does something very interesting
-    }
+    private View.OnClickListener cancel_button = new View.OnClickListener() {
+        public void onClick(View v) {
+            //Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+            Log.d("OnDoubleTapListener", "onDoubleTap");
+            Intent Image = new Intent(getApplicationContext() , tempMain.class);
+            startActivity(Image);
+            //pwindo.setBackgroundDrawable(new BitmapDrawable(getResources()));
+            pwindo.dismiss();
+        }
+    };
 }
-
-        /*GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener());
-        gestureDetector.setOnDoubleTapListener(new GestureDetector.OnDoubleTapListener() {
-            @Override
-            public boolean onSingleTapConfirmed(MotionEvent motionEvent) {
-                return false;
-            }
-
-            @Override
-            public boolean onDoubleTap(MotionEvent motionEvent) {
-                Log.d("OnDoubleTapListener", "onDoubleTap");
-                setContentView(R.layout.homepage);
-                return true;
-            }
-            @Override
-            public boolean onDoubleTapEvent(MotionEvent motionEvent) {
-                return false;
-            }
-        });*/
-        /*final GestureDetector gd = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
-            @Override
-            public boolean onDoubleTap(MotionEvent e) {
-                //your action here for double tap e.g.
-                Log.d("OnDoubleTapListener", "onDoubleTap");
-                return true;
-            }
-
-            @Override
-            public void onLongPress(MotionEvent e) {
-                super.onLongPress(e);
-            }
-            @Override
-            public boolean onDoubleTapEvent(MotionEvent e) {
-                Log.d("OnTapListener", "onTap");
-                return true;
-            }
-            @Override
-            public boolean onDown(MotionEvent e) {
-                return true;
-            }
-        });*/
-//setContentView(R.layout.homepage);

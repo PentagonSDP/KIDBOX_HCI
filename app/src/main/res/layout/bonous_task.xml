@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -13,57 +14,92 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="5dp"
 
-                >
-                <ImageView
+        >
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vegetable"
+            android:id="@+id/i2"
+            />
 
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/plant"
-                    android:id="@+id/i2"
-                    />
-
-
-            </LinearLayout>
-
-            <TextView
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="name: "
-                android:textColor="#003366"
-                android:textSize="20dp"
-                android:id="@+id/t_b"
-                />
-            <Button
-                android:id="@+id/b_b"
-                android:text="Done"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:textColor="#003366"
-                android:background="#f96e38"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name: "
+            android:textColor="#003366"
+            android:textSize="20dp"
+            android:id="@+id/t_b"></TextView>
 
 
+    </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/rel_bn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+        <ImageButton
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/yes"
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <ImageButton
+            android:id="@+id/no"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </ImageButton>
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do the task and get extra coins!!!"
+        android:textColor="#e25802"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/t_b2"
+        />
+
+    <HorizontalScrollView
+        android:background="#28adc4"
+        android:id="@+id/scroll_bn"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear_bn"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         </LinearLayout>
-
-    </ScrollView>
-
-
+    </HorizontalScrollView>
 
 </LinearLayout>

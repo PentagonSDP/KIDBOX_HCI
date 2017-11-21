@@ -66,7 +66,6 @@ public class ToDoActivity extends TabActivity {
         TabHostWindow.addTab(TabMenu1);
         TabHostWindow.addTab(TabMenu2);
         TabHostWindow.addTab(TabMenu3);
-
     }
 }
 
