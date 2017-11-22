@@ -11,7 +11,6 @@ import android.widget.ListView;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -80,7 +79,7 @@ public class TabActivity_2 extends Activity {
             }
             else{
                 InputStreamReader InputRead = new InputStreamReader(fileIn);
-                BufferedReader bufferedReader = new BufferedReader(new FileReader("bonus.txt"));
+                BufferedReader bufferedReader = new BufferedReader(InputRead);
                 String str1 = "";
                 //Log.e("Tab Activity1::file str", InputRead.toString() + bufferedReader.toString() );
                 Log.e("Tab Activity1::file", "File found");

@@ -18,7 +18,8 @@ public class Gk extends AppCompatActivity {
     GridView gv;
     Context context_gk;
     ArrayList prgmName;
-    public static int [] gkImagesList={R.drawable.country,
+    public static int [] gkImagesList=
+            {R.drawable.country,
             R.drawable.space,
             R.drawable.flower,
             R.drawable.animal,

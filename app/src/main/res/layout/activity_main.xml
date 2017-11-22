@@ -11,12 +11,12 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        android:background="#439bac"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
-        app:titleTextColor="@android:color/black"
+        app:titleTextColor="#fff260"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
     </android.support.v7.widget.Toolbar>
@@ -29,16 +29,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
+                android:background="#ffea5e"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageButton
+
                     android:id="@+id/story"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/storyf"
+                    android:src="@mipmap/story"
 
                     />
                 <ImageButton
@@ -46,13 +48,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/rhymesf"
+                    android:src="@mipmap/rhyme"
 
                     />
 
             </LinearLayout>
 
             <LinearLayout
+                android:background="#ffea5e"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -62,7 +65,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/cartoonf"
+                    android:src="@mipmap/cartoon"
 
                     />
                 <ImageButton
@@ -70,13 +73,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/gkf"
+                    android:src="@mipmap/gk"
 
                     />
 
             </LinearLayout>
 
             <LinearLayout
+                android:background="#ffea5e"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -86,7 +90,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/craftf"
+                    android:src="@mipmap/craft"
 
                     />
                 <ImageButton
@@ -94,7 +98,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/todolistf"
+                    android:src="@mipmap/todo"
 
                     />
 

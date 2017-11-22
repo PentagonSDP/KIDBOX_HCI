@@ -11,7 +11,6 @@ import android.widget.ListView;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -80,13 +79,13 @@ public class TabActivity_1 extends Activity {
         int file = 0;
 
         try {
-            FileReader fileIn = new FileReader("daily1.txt");
+            FileInputStream fileIn = openFileInput("daily1.txt");
             if( fileIn == null ){
                 Log.e("Tab Activity1::file", "noFile");
             }
             else{
-                //InputStreamReader InputRead = new InputStreamReader(fileIn);
-                BufferedReader bufferedReader = new BufferedReader(fileIn);
+                InputStreamReader InputRead = new InputStreamReader(fileIn);
+                BufferedReader bufferedReader = new BufferedReader(InputRead);
                 String str1 = "";
                 //Log.e("Tab Activity1::file str", InputRead.toString() + bufferedReader.toString() );
                 Log.e("Tab Activity1::file", "File found");

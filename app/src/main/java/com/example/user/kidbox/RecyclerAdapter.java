@@ -327,6 +327,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter
                     }
                 }
             });
+            //check_for_delete.setVisibility(View.INVISIBLE);
             return true;
         }
         /*
